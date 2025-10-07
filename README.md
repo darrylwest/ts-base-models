@@ -156,6 +156,6 @@ Make sure these are installed in your project.
 
 ## License
 
-ISC
+Apache 2.0
 
 ###### dpw | 2025.10.07
