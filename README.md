@@ -45,6 +45,7 @@ const user = UserSchema.parse(userData);
 #### `Base`
 
 The foundation model for all entities:
+
 - `key: string` - 16-character unique identifier
 - `date_created: number` - Creation timestamp
 - `last_updated: number` - Last update timestamp
@@ -54,6 +55,7 @@ The foundation model for all entities:
 #### `Address`
 
 Address information:
+
 - `addr1: string` - Primary address line
 - `addr2?: string` - Secondary address line (optional)
 - `addr3?: string` - Tertiary address line (optional)
@@ -67,6 +69,7 @@ Address information:
 #### `Person`
 
 Extends `Base` with:
+
 - `first_name?: string` - First name (optional)
 - `last_name?: string` - Last name (optional)
 - `email: string` - Email address (validated)
@@ -81,11 +84,13 @@ Extends `Base` with:
 #### `Contact`
 
 Extends `Person` with:
+
 - `key: string` - 16-character identifier starting with 'con:'
 
 #### `User`
 
 Extends `Person` with:
+
 - `key: string` - 16-character identifier starting with 'usr:'
 - `roles: string` - User roles
 - `preferences?: Record<string, string>` - User preferences (optional)
@@ -97,6 +102,7 @@ Extends `Person` with:
 #### `UserPassword`
 
 User password storage:
+
 - `user_key: string` - 16-character user identifier starting with 'usr:'
 - `password_hash: string` - Hashed password
 - `date_created: number` - Creation timestamp
